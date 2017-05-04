@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTActivityIndicatorViewManager.m \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTActivityIndicatorViewManager.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTViewManager.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/corey/tacogram/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/corey/tacogram/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/corey/tacogram/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/corey/tacogram/node_modules/react-native/React/Views/RCTActivityIndicatorView.h

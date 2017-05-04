@@ -1,3 +1,6 @@
 node_modules/
 .expo/
 npm-debug.*
+
+# iOS
+.DS_Store
