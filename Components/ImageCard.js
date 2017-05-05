@@ -6,10 +6,9 @@ class ImageCard extends Component {
   render () {
     return (
       <View style={Style.container}>
-        <Text>{this.props.title}</Text>
         <Image source={this.props.image} style={Style.image} />
-        <View>
-          <Text>{this.props.origin}</Text>
+        <View style={Style.contents}>
+          <Text style={{textAlign: 'center'}}>{this.props.title} from {this.props.origin}</Text>
         </View>
       </View>
     )

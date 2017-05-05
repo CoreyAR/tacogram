@@ -3,12 +3,6 @@ const colors = {
   green: 'rgba(0,175,75, .8)',
   fire: '#e73536',
   charcoal: '#595959',
-
-  primary: '#607D8B', // dark grey blue
-  secondary: '#CFD8DC', // light grey
-  accent: '#388E3C', // dark green
-  alternateAccent: '#81C784', // light green
-
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',

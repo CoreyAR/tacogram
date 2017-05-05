@@ -1,13 +1,22 @@
 import {StyleSheet} from 'react-native'
-import { Metrics } from '../../Themes'
+import { Colors } from '../../Themes'
 
 export default StyleSheet.create({
   container: {
-    height: Metrics.screenHeight * 0.66
+    borderRadius: 3,
+    borderColor: Colors.charcoal,
+    borderWidth: 5,
+    margin: 15,
+    padding: 5
+  },
+  contents: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   image: {
     height: 200,
     width: 200,
-    alignItems: 'center'
+    alignSelf: 'center'
   }
 })
