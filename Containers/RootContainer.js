@@ -4,7 +4,6 @@ import NavigationRouter from '../Navigation/NavigationRouter'
 import styles from './Styles/RootContainerStyle'
 
 class RootContainer extends Component {
-
   render () {
     return (
       <View style={styles.applicationView}>

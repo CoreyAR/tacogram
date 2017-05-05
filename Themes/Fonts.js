@@ -1,9 +1,9 @@
-import { Platform } from 'react-native' 
+import { Platform } from 'react-native'
 
 const type = {
-  base: (Platform.OS === 'ios') ? 'Helvetica' :'Roboto',
-  bold: (Platform.OS === 'ios') ? 'Helvetica' :'Roboto',
-  emphasis: (Platform.OS === 'ios') ? 'Helvetica' :'Roboto'
+  base: (Platform.OS === 'ios') ? 'Helvetica' : 'Roboto',
+  bold: (Platform.OS === 'ios') ? 'Helvetica' : 'Roboto',
+  emphasis: (Platform.OS === 'ios') ? 'Helvetica' : 'Roboto'
 }
 
 const size = {
@@ -61,4 +61,3 @@ export default {
   size,
   style
 }
-

@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { Image, Text, View } from 'react-native'
 import Style from './Styles/ImageCardStyle'
-import { Images } from '../Themes'
 
 class ImageCard extends Component {
-  render() {
-    console.log(this.props)
+  render () {
     return (
       <View style={Style.container}>
         <Text>{this.props.title}</Text>

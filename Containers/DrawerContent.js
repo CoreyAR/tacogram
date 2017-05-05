@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import { AsyncStorage, BackAndroid, Image, Text, View } from 'react-native'
+import { BackAndroid, Image, View } from 'react-native'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import Styles from './Styles/DrawerContentStyle'
 import { Images } from '../Themes'
 import DrawerButton from '../Components/DrawerButton'
 
-
 class DrawerContent extends Component {
-
   componentDidMount () {
     BackAndroid.addEventListener('hardwareBackPress', () => {
       if (this.context.drawer.props.open) {
@@ -27,6 +25,11 @@ class DrawerContent extends Component {
     NavigationActions.home()
   }
 
+  enterAddTaco = () => {
+    this.toggleDrawer()
+    NavigationActions.addTaco()
+  }
+
   render () {
     return (
       <View contentContainerStyle={{justifyContent: 'space-between'}}style={Styles.container}>
@@ -36,12 +39,12 @@ class DrawerContent extends Component {
         <View style={Styles.body}>
           <View style={Styles.menu}>
             <DrawerButton text='Home' icon={'home'} onPress={this.enterHome} />
+            <DrawerButton text='Add Taco' icon={'plus'} onPress={this.enterAddTaco} />
           </View>
         </View>
       </View>
     )
   }
-
 }
 
 DrawerContent.contextTypes = {
