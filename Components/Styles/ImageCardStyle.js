@@ -3,7 +3,7 @@ import { Metrics } from '../../Themes'
 
 export default StyleSheet.create({
   container: {
-    height: Metrics.screenHeight * .66,
+    height: Metrics.screenHeight * 0.66
   },
   image: {
     height: 200,

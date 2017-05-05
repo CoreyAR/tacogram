@@ -5,7 +5,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: Colors.green,
+    backgroundColor: Colors.green
   },
   body: {
     flex: 3
