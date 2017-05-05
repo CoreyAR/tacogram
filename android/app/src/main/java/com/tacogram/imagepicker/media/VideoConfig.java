@@ -1,4 +1,4 @@
-package com.imagepicker.media;
+package com.tacogram.imagepicker.media;
 
 /**
  * Created by rusfearuth on 16.03.17.

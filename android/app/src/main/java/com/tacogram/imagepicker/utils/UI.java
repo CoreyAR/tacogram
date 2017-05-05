@@ -1,4 +1,4 @@
-package com.imagepicker.utils;
+package com.tacogram.imagepicker.utils;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,8 +9,8 @@ import android.support.v7.app.AlertDialog;
 import android.widget.ArrayAdapter;
 
 import com.facebook.react.bridge.ReadableMap;
-import com.imagepicker.ImagePickerModule;
-import com.imagepicker.R;
+import com.tacogram.imagepicker.ImagePickerModule;
+import com.tacogram.R;
 
 import java.lang.ref.WeakReference;
 import java.util.List;

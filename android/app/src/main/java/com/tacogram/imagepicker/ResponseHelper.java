@@ -1,4 +1,4 @@
-package com.imagepicker;
+package com.tacogram.imagepicker;
 
 import android.support.annotation.NonNull;
 

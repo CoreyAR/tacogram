@@ -1,4 +1,4 @@
-package com.imagepicker;
+package com.tacogram.imagepicker;
 
 import android.support.annotation.StyleRes;
 
@@ -11,6 +11,8 @@ import com.facebook.react.uimanager.ViewManager;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import com.tacogram.R;
 
 public class ImagePickerPackage implements ReactPackage {
   public static final int DEFAULT_EXPLAINING_PERMISSION_DIALIOG_THEME = R.style.DefaultExplainingPermissionsTheme;

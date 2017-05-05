@@ -1,4 +1,4 @@
-package com.imagepicker;
+package com.tacogram.imagepicker;
 
 import android.Manifest;
 import android.app.Activity;
@@ -28,12 +28,12 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
-import com.imagepicker.media.ImageConfig;
-import com.imagepicker.permissions.PermissionUtils;
-import com.imagepicker.permissions.OnImagePickerPermissionsCallback;
-import com.imagepicker.utils.MediaUtils.ReadExifResult;
-import com.imagepicker.utils.RealPathUtil;
-import com.imagepicker.utils.UI;
+import com.tacogram.imagepicker.media.ImageConfig;
+import com.tacogram.imagepicker.permissions.PermissionUtils;
+import com.tacogram.imagepicker.permissions.OnImagePickerPermissionsCallback;
+import com.tacogram.imagepicker.utils.MediaUtils.ReadExifResult;
+import com.tacogram.imagepicker.utils.RealPathUtil;
+import com.tacogram.imagepicker.utils.UI;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -47,9 +47,9 @@ import java.lang.ref.WeakReference;
 
 import com.facebook.react.modules.core.PermissionListener;
 
-import static com.imagepicker.utils.MediaUtils.*;
-import static com.imagepicker.utils.MediaUtils.createNewFile;
-import static com.imagepicker.utils.MediaUtils.getResizedImage;
+import static com.tacogram.imagepicker.utils.MediaUtils.*;
+import static com.tacogram.imagepicker.utils.MediaUtils.createNewFile;
+import static com.tacogram.imagepicker.utils.MediaUtils.getResizedImage;
 
 public class ImagePickerModule extends ReactContextBaseJavaModule
         implements ActivityEventListener

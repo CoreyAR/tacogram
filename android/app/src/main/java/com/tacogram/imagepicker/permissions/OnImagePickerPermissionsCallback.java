@@ -1,4 +1,4 @@
-package com.imagepicker.permissions;
+package com.tacogram.imagepicker.permissions;
 
 import android.support.annotation.NonNull;
 import com.facebook.react.modules.core.PermissionListener;

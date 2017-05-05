@@ -1,4 +1,4 @@
-package com.imagepicker.utils;
+package com.tacogram.imagepicker.utils;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

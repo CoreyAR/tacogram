@@ -1,4 +1,4 @@
-package com.imagepicker.utils;
+package com.tacogram.imagepicker.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,9 +13,9 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.facebook.react.bridge.ReadableMap;
-import com.imagepicker.ImagePickerModule;
-import com.imagepicker.ResponseHelper;
-import com.imagepicker.media.ImageConfig;
+import com.tacogram.imagepicker.ImagePickerModule;
+import com.tacogram.imagepicker.ResponseHelper;
+import com.tacogram.imagepicker.media.ImageConfig;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -29,7 +29,7 @@ import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 import java.util.UUID;
 
-import static com.imagepicker.ImagePickerModule.REQUEST_LAUNCH_IMAGE_CAPTURE;
+import static com.tacogram.imagepicker.ImagePickerModule.REQUEST_LAUNCH_IMAGE_CAPTURE;
 
 /**
  * Created by rusfearuth on 15.03.17.
