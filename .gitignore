@@ -2,5 +2,9 @@ node_modules/
 .expo/
 npm-debug.*
 
+# XCode
+Cache.db
+*.xcactivitylog
+
 # iOS
 .DS_Store
