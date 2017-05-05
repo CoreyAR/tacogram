@@ -10,6 +10,15 @@ $ cp ~/react-native-image-picker/ios/ImagePickerManager.h ~/tacogram/ios/ImagePi
 $ cp ~/react-native-image-picker/ios/ImagePickerManager.m ~/tacogram/ios/ImagePickerManager.m 
 ```
 
+2. Link files to XCode project
+Secondary click on tacogram project and select 'Add new files to "tacogram"..' and select ImagePickerManager.h and ImagePickerManager.m
+
+3. The ImagePickerManager is now accessible from NativeModules but you will get and error "'Actions added to UIAlertController must have a title' was thrown while invoking showImagePicker on target ImagePickerManager ..."
+
+This is because options keys 'cancelButtonTitle', 'takePhotoButtonTitle', 'chooseFromLibraryButtonTitle' no longer have default values. Add those keys to your options object.
+
+4. The final step is add Camera, and Photo Media permissions to Info.plist. (Privacy - Photo Library Usage Description and Privacy - Camera Usage Description)
+
 ### Android
 1. Copy files
 ```
