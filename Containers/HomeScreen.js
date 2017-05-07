@@ -12,6 +12,15 @@ class HomeScreen extends Component {
     }
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (this.props.taco !== nextProps.taco) {
+      console.log('taco added')
+      // Add key based on length of array
+      nextProps.taco.key = this.state.tacos.length + 1
+      this.setState({tacos: this.state.tacos.concat(nextProps.taco)})
+    }
+  }
+
   render () {
     return (
       <View
@@ -26,6 +35,10 @@ class HomeScreen extends Component {
       </View>
     )
   }
+}
+
+HomeScreen.defaultProps = {
+  taco: null
 }
 
 export default HomeScreen

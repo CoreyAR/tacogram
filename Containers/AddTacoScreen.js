@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import { Image, NativeModules, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, Picker, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import ImagePicker from 'react-native-image-picker'
+import { Actions as NavigationActions } from 'react-native-router-flux'
+import Button from '../Components/Button'
+import CrossPlatformPicker from '../Components/CrossPlatformPicker'
 import Style from './Styles/AddTacoScreenStyle'
-import { Colors } from '../Themes'
-
-const ImagePicker = NativeModules.ImagePickerManager
+import { Colors, Images } from '../Themes'
+import TACO_DATA from '../Fixtures/TacoData'
 
 var options = {
   title: 'Select Avatar',
@@ -24,16 +27,14 @@ class AddTacoScreen extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      image: '',
-      origin: '',
+      image: Images.logo,
+      origin: 'Mexico',
       title: ''
     }
   }
 
   showImagePicker () {
     ImagePicker.showImagePicker(options, (response) => {
-      console.log('Response = ', response)
-
       if (response.didCancel) {
         console.log('User cancelled image picker')
       } else if (response.error) {
@@ -47,40 +48,65 @@ class AddTacoScreen extends Component {
       // let source = { uri: 'data:image/jpeg;base64,' + response.data };
 
         this.setState({
-          avatarSource: source
+          image: source
         })
       }
     })
   }
 
+  addTaco () {
+    NavigationActions.home({type: 'reset', taco: {...this.state}})
+  }
+
   render () {
     return (
-      <View
+      <ScrollView
         contentContainerStyle={{justifyContent: 'center'}}
         style={[Style.container]}
       >
-        <View style={{flex: 2}}>
-          <Image source={this.state.image} />
+        <View style={Style.imageContainer}>
+          <Image style={Style.image} source={this.state.image} />
         </View>
-        <View style={{flex: 1}}>
-          <TouchableOpacity onPress={this.showImagePicker}>
+        <View style={Style.form}>
+          <TouchableOpacity onPress={() => this.showImagePicker()}>
             <Icon name={'camera'} size={30} color={Colors.charcoal} style={{alignSelf: 'center'}} />
           </TouchableOpacity>
-          <Text>Title</Text>
-          <TextInput
-            onChange={(title) => this.setState({title})}
-            value={this.state.title}
-            placeholder='Title'
-          />
-          <Text>Origin</Text>
-          <TextInput
-            onChange={(origin) => this.setState({origin})}
-            value={this.state.origin}
-            placeholder='Origin'
-          />
+          <View>
+            <Text>Title</Text>
+            <TextInput
+              onChangeText={(title) => this.setState({title})}
+              value={this.state.title}
+              placeholder='Title'
+              style={Style.textInput}
+            />
+          </View>
+          <View>
+            <Text>Origin</Text>
+            <CrossPlatformPicker
+              selectedValue={this.state.origin}
+              onValueChange={(origin) => this.setState({origin})}
+              itemStyle={{fontSize: 16, fontWeight: 'bold'}}
+              style={Style.picker}
+            >
+              {this.renderOriginPickerItems()}
+            </CrossPlatformPicker>
+          </View>
+          <Button raised label='Add Taco' onPress={() => this.addTaco()} style={Style.buttonContainer} />
         </View>
-      </View>
+      </ScrollView>
     )
+  }
+
+  renderOriginPickerItems () {
+    const pickerItems = TACO_DATA.reduce((acc, cur) => {
+      if (acc.indexOf(cur.origin) < 0) {
+        acc.push(cur.origin)
+      }
+      return acc
+    }, []).map((d, i) => {
+      return <Picker.Item label={d} value={d} key={1} />
+    })
+    return pickerItems
   }
 }
 
