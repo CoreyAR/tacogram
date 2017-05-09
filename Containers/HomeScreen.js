@@ -17,8 +17,17 @@ class HomeScreen extends Component {
       console.log('taco added')
       // Add key based on length of array
       nextProps.taco.key = this.state.tacos.length + 1
-      this.setState({tacos: this.state.tacos.concat(nextProps.taco)})
+      this.setState((prevState) => ({tacos: prevState.tacos.concat(nextProps.taco)}))
     }
+  }
+
+  componentDidMount () {
+    if (this.props.taco === null) return
+    this.setState((prevState) => ({
+      tacos: prevState.tacos.concat(
+        Object.assign({}, this.props.taco, { key: prevState.tacos.length + 1 })
+      )
+    }))
   }
 
   render () {
