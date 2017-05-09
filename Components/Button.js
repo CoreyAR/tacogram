@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, View, Platform, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback } from 'react-native'
 import Style from './Styles/ButtonStyle'
 
-const ButtonWrapper = ({ raised, onPress, children }) => {
+const ButtonWrapper = ({ raised, onPress, children, style }) => {
   // All Android Buttons should have the ripple effect
   if (Platform.OS === 'android') {
     // Raised Android buttons need a white ripple
@@ -12,7 +12,7 @@ const ButtonWrapper = ({ raised, onPress, children }) => {
           onPress={onPress}
           background={TouchableNativeFeedback.Ripple('#FFF')}
         >
-          <View style={[Style.button, Style.buttonRaised]}>
+          <View style={[Style.button, Style.buttonRaised, style]}>
             {children}
           </View>
         </TouchableNativeFeedback>
@@ -25,7 +25,7 @@ const ButtonWrapper = ({ raised, onPress, children }) => {
         onPress={onPress}
         background={TouchableNativeFeedback.Ripple()}
       >
-        <View style={[Style.button, Style.buttonFLat]}>
+        <View style={[Style.button, Style.buttonFLat, style]}>
           {children}
         </View>
       </TouchableNativeFeedback>
@@ -36,7 +36,7 @@ const ButtonWrapper = ({ raised, onPress, children }) => {
   if (raised) {
     return (
       <TouchableHighlight
-        style={[Style.button, Style.buttonRaised]}
+        style={[Style.button, Style.buttonRaised, style]}
         underlayColor='#0052AC'
         onPress={onPress}
       >
@@ -48,7 +48,7 @@ const ButtonWrapper = ({ raised, onPress, children }) => {
   // Normal iOS buttons use TouchableOpacity
   return (
     <TouchableOpacity
-      style={[Style.button, Style.buttonFlat]}
+      style={[Style.button, Style.buttonFlat, style]}
       onPress={onPress}
     >
       {children}
