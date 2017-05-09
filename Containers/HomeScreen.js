@@ -25,7 +25,7 @@ class HomeScreen extends Component {
     if (this.props.taco === null) return
     this.setState((prevState) => ({
       tacos: prevState.tacos.concat(
-        Object.assign({}, this.props.taco, { key: this.props.taco.title })
+        Object.assign({}, this.props.taco, { key: prevState.tacos.length + 1 })
       )
     }))
   }
